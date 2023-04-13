@@ -18,11 +18,19 @@ async function responseForPostSEO(request, env, id) {
 
     body = body.slice(0, idxHeadEnd) + "<meta name=\"og:title\" content=\"Hello Injected Title: " + id + "\" />" + body.slice(idxHeadEnd);
 
-    resp.headers.set("Content-Length", body.length.toString())
+    const newHeaders = {
+        'content-lenght': body.length.toString()
+    }
+
+    resp.headers.forEach((value, key) => {
+        if (key.toLowerCase() !== "content-length") {
+            newHeaders[key] = value;
+        }
+    })
 
     return new Response(body, {
         status: resp.status,
-        headers: resp.headers,
+        headers: newHeaders,
     })
 }
 
