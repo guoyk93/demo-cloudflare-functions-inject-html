@@ -1,5 +1,5 @@
 {
-  "name": "demo-cf-inject-html",
+  "name": "demo-cloudflare-functions-inject-html",
   "version": "0.0.0",
   "private": true,
   "scripts": {
