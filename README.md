@@ -1,6 +1,8 @@
 # demo-cloudflare-functions-inject-html
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple demostration of injecting tags to html in Cloudflare Pages
+
+https://guoyk.xyz/posts/2023-04-13-zh-seo-tags-with-cloudflare-pages-functions
 
 ## Recommended IDE Setup
 
